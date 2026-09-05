@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive image gallery built with HTML, CSS and JavaScript for CodeAlpha Frontend Development Internship.">
+  <title>Image Gallery | CodeAlpha Internship</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <a class="logo" href="#">Image<span>Gallery</span></a>
+      <a class="github-btn" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">CodeAlpha • Frontend Development Internship</p>
+      <h1>Explore the Gallery</h1>
+      <p class="subtitle">A responsive and interactive image gallery built using HTML, CSS and JavaScript.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Gallery filters">
+      <div>
+        <h2>My Gallery</h2>
+        <p id="resultCount">Showing all images</p>
+      </div>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="nature">Nature</button>
+        <button class="filter-btn" data-filter="city">City</button>
+        <button class="filter-btn" data-filter="travel">Travel</button>
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery" aria-label="Image gallery">
+      <article class="gallery-item" data-category="nature">
+        <button class="image-card" data-index="0" aria-label="Open Mountain Morning">
+          <img src="images/mountain.svg" alt="Mountain landscape">
+          <span class="image-info"><strong>Mountain Morning</strong><small>Nature</small></span>
+        </button>
+      </article>
+
+      <article class="gallery-item" data-category="nature">
+        <button class="image-card" data-index="1" aria-label="Open Forest Escape">
+          <img src="images/forest.svg" alt="Green forest">
+          <span class="image-info"><strong>Forest Escape</strong><small>Nature</small></span>
+        </button>
+      </article>
+
+      <article class="gallery-item" data-category="city">
+        <button class="image-card" data-index="2" aria-label="Open City Lights">
+          <img src="images/city.svg" alt="City skyline at night">
+          <span class="image-info"><strong>City Lights</strong><small>City</small></span>
+        </button>
+      </article>
+
+      <article class="gallery-item" data-category="travel">
+        <button class="image-card" data-index="3" aria-label="Open Beach Journey">
+          <img src="images/beach.svg" alt="Beach and ocean">
+          <span class="image-info"><strong>Beach Journey</strong><small>Travel</small></span>
+        </button>
+      </article>
+
+      <article class="gallery-item" data-category="travel">
+        <button class="image-card" data-index="4" aria-label="Open Desert Road">
+          <img src="images/desert.svg" alt="Desert road">
+          <span class="image-info"><strong>Desert Road</strong><small>Travel</small></span>
+        </button>
+      </article>
+
+      <article class="gallery-item" data-category="city">
+        <button class="image-card" data-index="5" aria-label="Open Modern Architecture">
+          <img src="images/architecture.svg" alt="Modern architecture">
+          <span class="image-info"><strong>Modern Architecture</strong><small>City</small></span>
+        </button>
+      </article>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="close-btn" id="closeBtn" aria-label="Close image viewer">&times;</button>
+    <button class="nav-btn prev" id="prevBtn" aria-label="Previous image">&#10094;</button>
+
+    <div class="lightbox-content">
+      <img id="lightboxImage" src="" alt="">
+      <div class="caption">
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxCategory"></p>
+      </div>
+      <div class="progress" id="progress">1 / 6</div>
+    </div>
+
+    <button class="nav-btn next" id="nextBtn" aria-label="Next image">&#10095;</button>
+  </div>
+
+  <footer>
+    <p>Built with HTML • CSS • JavaScript | CodeAlpha Internship Task 1</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
